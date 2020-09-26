@@ -6,6 +6,16 @@ namespace Commander.Data
 {
     public class MockCommanderRepository : ICommanderRepository
     {
+        public void CreateCommand(Command command)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteCommand(Command command)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Command> GetAllCommands()
         {
             var commands = new List<Command>
@@ -21,6 +31,16 @@ namespace Commander.Data
         public Command GetCommandById(int id)
         {
             return new Command { Id = 1, HowTo = "Boild an egg", Line = "Boil Water", Platform = "Kettle & Pan" };
+        }
+
+        public bool SaveChanges()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateCommand(Command command)
+        {
+            throw new NotImplementedException();
         }
     }
 }
